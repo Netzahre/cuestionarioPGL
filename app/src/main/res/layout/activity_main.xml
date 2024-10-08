@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pregunta1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Cuál es el nombre completo del personaje principal de Death Stranding? "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/respuestarad1preg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sam Porter Bridges (Correcta) " />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad2preg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="John Walker" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad3preg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Clifford Unger" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad4preg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Die-Hardman" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/resultado1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pregunta2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Cuál es la función del BB (Bridge Baby) en el juego? "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/respuestaspinpreg2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <TextView
+                    android:id="@+id/resultado2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pregunta3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿En qué continente se desarrolla la mayor parte de la acción en Death Stranding?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/respuestarad1preg3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Europa" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad2preg3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="América (Correcta)" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad3preg3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Asia" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad4preg3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Australia" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/resultado3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pregunta4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Quién de estos personajes es el antagonista principal de Death Stranding?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/respuestaspinpreg4"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <TextView
+                    android:id="@+id/resultado4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pregunta5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Qué criaturas hostiles pueden aparecer durante los episodios de Timefall?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check1Preg5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BTs (Correcta)" />
+
+                <CheckBox
+                    android:id="@+id/check2Preg5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mule (Incorrecta)" />
+
+                <CheckBox
+                    android:id="@+id/check3Preg5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EV (Correcta)" />
+
+                <CheckBox
+                    android:id="@+id/check4Preg5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ghouls (Incorrecta)" />
+
+                <TextView
+                    android:id="@+id/resultado5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pregunta6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Cuál de los siguientes equipos te permite transportarte rápidamente entre ubicaciones? "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/respuestaspinpreg6"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <TextView
+                    android:id="@+id/resultado6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pregunta7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Cuál de estos temas es central en la narrativa de Death Stranding?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/respuestarad1preg7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Conexiones y aislamiento (Correcta)" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad2preg7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Guerra y política" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad3preg7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Venganza y redención" />
+
+                    <RadioButton
+                        android:id="@+id/respuestarad4preg7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ciencia y magia" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/resultado7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pregunta8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="¿Qué efecto tiene el Timefall en los objetos y en el entorno?"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/respuestarad1preg8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Acelera el deterioro y envejecimiento (Correcta)" />
+
+                        <RadioButton
+                            android:id="@+id/respuestarad2preg8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regenera la flora y fauna" />
+
+                        <RadioButton
+                            android:id="@+id/respuestarad3preg8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ralentiza el paso del tiempo" />
+
+                        <RadioButton
+                            android:id="@+id/respuestarad4preg8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transforma los objetos en otros materiales" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/resultado8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
