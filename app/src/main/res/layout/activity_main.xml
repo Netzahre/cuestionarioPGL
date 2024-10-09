@@ -7,12 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@mipmap/clifford"
+        ></LinearLayout>
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="1dp"
-        android:background="#020202"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,29 +66,29 @@
                         android:id="@+id/respuestarad1preg1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="Sam Porter Bridges (Correcta) " />
+                        android:text="Sam Porter Bridges (Correcta) "
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad2preg1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="John Walker" />
+                        android:text="John Walker"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad3preg1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="Clifford Unger" />
+                        android:text="Clifford Unger"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad4preg1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="Die-Hardman" />
+                        android:text="Die-Hardman"
+                        android:textColor="#FFFFFF" />
 
                 </RadioGroup>
 
@@ -109,9 +115,9 @@
                 <TextView
                     android:id="@+id/pregunta2"
                     android:layout_width="match_parent"
-                    android:textColor="#C79E51"
                     android:layout_height="wrap_content"
                     android:text="¿Cuál es la función del BB (Bridge Baby) en el juego? "
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -144,10 +150,10 @@
 
                 <TextView
                     android:id="@+id/pregunta3"
-                    android:textColor="#C79E51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿En qué continente se desarrolla la mayor parte de la acción en Death Stranding?"
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -158,30 +164,30 @@
                     <RadioButton
                         android:id="@+id/respuestarad1preg3"
                         android:layout_width="match_parent"
-                        android:textColor="#FFFFFF"
                         android:layout_height="wrap_content"
-                        android:text="Europa" />
+                        android:text="Europa"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad2preg3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="América (Correcta)" />
+                        android:text="América (Correcta)"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad3preg3"
                         android:layout_width="match_parent"
-                        android:textColor="#FFFFFF"
                         android:layout_height="wrap_content"
-                        android:text="Asia" />
+                        android:text="Asia"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad4preg3"
                         android:layout_width="match_parent"
-                        android:textColor="#FFFFFF"
                         android:layout_height="wrap_content"
-                        android:text="Australia" />
+                        android:text="Australia"
+                        android:textColor="#FFFFFF" />
                 </RadioGroup>
 
                 <TextView
@@ -205,10 +211,10 @@
 
                 <TextView
                     android:id="@+id/pregunta4"
-                    android:textColor="#C79E51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Quién de estos personajes es el antagonista principal de Death Stranding?"
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -238,10 +244,10 @@
 
                 <TextView
                     android:id="@+id/pregunta5"
-                    android:textColor="#C79E51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Qué criaturas hostiles pueden aparecer durante los episodios de Timefall?"
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -249,29 +255,29 @@
                     android:id="@+id/check1Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="BTs (Correcta)" />
+                    android:text="BTs (Correcta)"
+                    android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check2Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Mule (Incorrecta)" />
+                    android:text="Mule (Incorrecta)"
+                    android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check3Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="EV (Correcta)" />
+                    android:text="EV (Correcta)"
+                    android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check4Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Ghouls (Incorrecta)" />
+                    android:text="Ghouls (Incorrecta)"
+                    android:textColor="#FFFFFF" />
 
                 <TextView
                     android:id="@+id/resultado5"
@@ -294,10 +300,10 @@
 
                 <TextView
                     android:id="@+id/pregunta6"
-                    android:textColor="#C79E51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Cuál de los siguientes equipos te permite transportarte rápidamente entre ubicaciones? "
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -327,10 +333,10 @@
 
                 <TextView
                     android:id="@+id/pregunta7"
-                    android:textColor="#C79E51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Cuál de estos temas es central en la narrativa de Death Stranding?"
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -342,29 +348,29 @@
                         android:id="@+id/respuestarad1preg7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="Conexiones y aislamiento (Correcta)" />
+                        android:text="Conexiones y aislamiento (Correcta)"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad2preg7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="Guerra y política" />
+                        android:text="Guerra y política"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad3preg7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="Venganza y redención" />
+                        android:text="Venganza y redención"
+                        android:textColor="#FFFFFF" />
 
                     <RadioButton
                         android:id="@+id/respuestarad4preg7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FFFFFF"
-                        android:text="Ciencia y magia" />
+                        android:text="Ciencia y magia"
+                        android:textColor="#FFFFFF" />
                 </RadioGroup>
 
                 <TextView
@@ -386,10 +392,10 @@
 
                     <TextView
                         android:id="@+id/pregunta8"
-                        android:textColor="#C79E51"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="¿Qué efecto tiene el Timefall en los objetos y en el entorno?"
+                        android:textColor="#C79E51"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -401,29 +407,29 @@
                             android:id="@+id/respuestarad1preg8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#FFFFFF"
-                            android:text="Acelera el deterioro y envejecimiento (Correcta)" />
+                            android:text="Acelera el deterioro y envejecimiento (Correcta)"
+                            android:textColor="#FFFFFF" />
 
                         <RadioButton
                             android:id="@+id/respuestarad2preg8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#FFFFFF"
-                            android:text="Regenera la flora y fauna" />
+                            android:text="Regenera la flora y fauna"
+                            android:textColor="#FFFFFF" />
 
                         <RadioButton
                             android:id="@+id/respuestarad3preg8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#FFFFFF"
-                            android:text="Ralentiza el paso del tiempo" />
+                            android:text="Ralentiza el paso del tiempo"
+                            android:textColor="#FFFFFF" />
 
                         <RadioButton
                             android:id="@+id/respuestarad4preg8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#FFFFFF"
-                            android:text="Transforma los objetos en otros materiales" />
+                            android:text="Transforma los objetos en otros materiales"
+                            android:textColor="#FFFFFF" />
                     </RadioGroup>
 
                     <TextView
@@ -449,10 +455,10 @@
 
                 <TextView
                     android:id="@+id/pregunta9"
-                    android:textColor="#C79E51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Cuál es el propósito de las estructuras Chiral que construyes y utilizas en el juego?"
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -460,29 +466,29 @@
                     android:id="@+id/check1Preg9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Facilitar la conexión entre jugadores en línea (Correcta)" />
+                    android:text="Facilitar la conexión entre jugadores en línea (Correcta)"
+                    android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check2Preg9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Proveer puntos de almacenamiento" />
+                    android:text="Proveer puntos de almacenamiento"
+                    android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check3Preg9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Permitir teletransportarse (Correcta)" />
+                    android:text="Permitir teletransportarse (Correcta)"
+                    android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check4Preg9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Ofrecer nuevos tipos de armas" />
+                    android:text="Ofrecer nuevos tipos de armas"
+                    android:textColor="#FFFFFF" />
 
                 <TextView
                     android:id="@+id/resultado9"
@@ -505,10 +511,10 @@
 
                 <TextView
                     android:id="@+id/pregunta10"
-                    android:textColor="#C79E51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Cuál es el objetivo principal de Sam Porter en Death Stranding?"
+                    android:textColor="#C79E51"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -556,10 +562,10 @@
                     android:id="@+id/resultado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
                     android:text="Resultado:"
                     android:textAlignment="viewStart"
                     android:textColor="#FFFFFF"
-                    android:paddingRight="10dp"
                     android:textSize="34sp" />
 
                 <TextView
