@@ -30,7 +30,7 @@
                 android:adjustViewBounds="true"
                 android:cropToPadding="true"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/deathstrandingtitlescreen_foreground" />
+                android:src="@drawable/deathstranding" />
 
             <Space
                 android:layout_width="match_parent"
