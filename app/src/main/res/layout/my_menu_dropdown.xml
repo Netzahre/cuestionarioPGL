@@ -7,6 +7,7 @@
     android:textColor="#FFFFFF"
     android:padding="5dp"
     android:background="#99020202"
+    android:gravity="center"
     >
 
 </TextView>

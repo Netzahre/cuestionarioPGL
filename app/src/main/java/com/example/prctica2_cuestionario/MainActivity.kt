@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -13,7 +14,26 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    val respuestasSimpleUsuario = arrayOfNulls<String>(8)
+    val respuestasMultiplesUsuario = mutableListOf<MutableList<String>>()
+    val respuestasCorrectasUnica = arrayOf(
+        "Sam Porter Bridges", "Detectar entidades sobrenaturales",
+        "América", "Higgs Monaghan", "Tiendas privadas", "Conexiones y aislamiento",
+        "Acelera el deterioro y envejecimiento", "Reconectar a América"
+    )
+
+    val respuestasCorrectasMultiopcion = arrayOf(
+        arrayOf("BTs", "EV"),
+        arrayOf("Facilitar la conexión entre jugadores en línea", "Permitir teletransportarse"),
+        arrayOf()
+    )
+
+    lateinit var indicadoresCorrectoUnica: Array<TextView>
+    lateinit var indicadoresCorrectoMultiple: Array<TextView>
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -22,66 +42,59 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val respuestasCorrectasUnica = arrayOf("Sam Porter Bridges", "Detectar entidades sobrenaturales",
-            "América", "Higgs Monaghan","Tiendas privadas", "Conexiones y aislamiento",
-            "Acelera el deterioro y envejecimiento", "Reconectar a América")
 
-        val respuestasCorrectasMultiopcion = arrayOf(arrayOf("BTs", "EV"),
-            arrayOf("Facilitar la conexión entre jugadores en línea", "Permitir teletransportarse"),
-            arrayOf()
+
+        val pregunta1 = arrayOf(
+            "Detectar entidades sobrenaturales",
+            "Servir como una fuente de energía",
+            "Sanar heridas",
+            "Brindar información sobre el pasado"
         )
-
-        val pregunta1 = arrayOf("Detectar entidades sobrenaturales",
-            "Servir como una fuente de energía", "Sanar heridas", "Brindar información sobre el pasado")
-        val adaptador1 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown,
-            pregunta1)
+        val adaptador1 = ArrayAdapter(
+            this, R.layout.my_menu_dropdown,
+            pregunta1
+        )
         val spinner1 = findViewById<Spinner>(R.id.respuestaspinpreg2)
         spinner1.adapter = adaptador1
 
         val pregunta4 = arrayOf("Heartman", "Fragile", "Higgs Monaghan", "Amelie")
-        val adaptador2 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown, pregunta4)
+        val adaptador2 = ArrayAdapter(this, R.layout.my_menu_dropdown, pregunta4)
         val spinner2 = findViewById<Spinner>(R.id.respuestaspinpreg4)
         spinner2.adapter = adaptador2
 
         val pregunta6 = arrayOf("Moto triciclo", "Tiendas privadas", "Exoesqueleto", "Camiones")
-        val adaptador3 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown, pregunta6)
+        val adaptador3 = ArrayAdapter(this, R.layout.my_menu_dropdown, pregunta6)
         val spinner3 = findViewById<Spinner>(R.id.respuestaspinpreg6)
         spinner3.adapter = adaptador3
 
-        val pregunta10 = arrayOf("Reconectar a América", "Destruir a los BTs", "Derrotar a Higgs", "Salvar a Amelie")
-        val adaptador4 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown, pregunta10)
+        val pregunta10 = arrayOf(
+            "Reconectar a América",
+            "Destruir a los BTs",
+            "Derrotar a Higgs",
+            "Salvar a Amelie"
+        )
+        val adaptador4 = ArrayAdapter(this, R.layout.my_menu_dropdown, pregunta10)
         val spinner4 = findViewById<Spinner>(R.id.respuestaspinpreg10)
         spinner4.adapter = adaptador4
 
-        val respuestaRadio1Preg1 = findViewById<RadioButton>(R.id.respuestarad1preg1)
-        val respuestaRadio2Preg1 = findViewById<RadioButton>(R.id.respuestarad2preg1)
-        val respuestaRadio3Preg1 = findViewById<RadioButton>(R.id.respuestarad3preg1)
-        val respuestaRadio4Preg1 = findViewById<RadioButton>(R.id.respuestarad4preg1)
+        val grupo1 = findViewById<RadioGroup>(R.id.grupo1)
+        val grupo2 = findViewById<RadioGroup>(R.id.grupo2)
+        val grupo3 = findViewById<RadioGroup>(R.id.grupo3)
+        val grupo4 = findViewById<RadioGroup>(R.id.grupo4)
 
-        val respuestaRadio1Preg3 = findViewById<RadioButton>(R.id.respuestarad1preg3)
-        val respuestaRadio2Preg3 = findViewById<RadioButton>(R.id.respuestarad2preg3)
-        val respuestaRadio3Preg3 = findViewById<RadioButton>(R.id.respuestarad3preg3)
-        val respuestaRadio4Preg3 = findViewById<RadioButton>(R.id.respuestarad4preg3)
+        val checkBoxesPregunta5 = listOf<CheckBox>(
+            findViewById(R.id.check1Preg5),
+            findViewById(R.id.check2Preg5),
+            findViewById(R.id.check3Preg5),
+            findViewById(R.id.check4Preg5)
+        )
 
-        val respuestaRadio1Preg7 = findViewById<RadioButton>(R.id.respuestarad1preg7)
-        val respuestaRadio2Preg7 = findViewById<RadioButton>(R.id.respuestarad2preg7)
-        val respuestaRadio3Preg7 = findViewById<RadioButton>(R.id.respuestarad3preg7)
-        val respuestaRadio4Preg7 = findViewById<RadioButton>(R.id.respuestarad4preg7)
-
-        val respuestaRadio1Preg8 = findViewById<RadioButton>(R.id.respuestarad1preg8)
-        val respuestaRadio2Preg8 = findViewById<RadioButton>(R.id.respuestarad2preg8)
-        val respuestaRadio3Preg8 = findViewById<RadioButton>(R.id.respuestarad3preg8)
-        val respuestaRadio4Preg8 = findViewById<RadioButton>(R.id.respuestarad4preg8)
-
-        val check1preg5 = findViewById<CheckBox>(R.id.check1Preg5)
-        val check2preg5 = findViewById<CheckBox>(R.id.check2Preg5)
-        val check3preg5 = findViewById<CheckBox>(R.id.check3Preg5)
-        val check4preg5 = findViewById<CheckBox>(R.id.check4Preg5)
-
-        val check1preg9 = findViewById<CheckBox>(R.id.check1Preg9)
-        val check2preg9 = findViewById<CheckBox>(R.id.check2Preg9)
-        val check3preg9 = findViewById<CheckBox>(R.id.check3Preg9)
-        val check4preg9 = findViewById<CheckBox>(R.id.check4Preg9)
+        val checkBoxesPregunta9 = listOf<CheckBox>(
+            findViewById(R.id.check1Preg9),
+            findViewById(R.id.check2Preg9),
+            findViewById(R.id.check3Preg9),
+            findViewById(R.id.check4Preg9)
+        )
 
         val corregir = findViewById<Button>(R.id.corregir)
 
@@ -96,8 +109,113 @@ class MainActivity : AppCompatActivity() {
         val resultado9 = findViewById<TextView>(R.id.resultado9)
         val resultado10 = findViewById<TextView>(R.id.resultado10)
 
+        indicadoresCorrectoUnica = arrayOf(resultado1, resultado2, resultado3, resultado4, resultado6,
+            resultado7, resultado8, resultado10)
+
+        indicadoresCorrectoMultiple = arrayOf(resultado5, resultado9)
+
+
         val resultadoTotal = findViewById<TextView>(R.id.numero)
+        corregir.setOnClickListener { corregir(grupo1, grupo2, grupo3, grupo4, spinner1, spinner2, spinner3, spinner4, checkBoxesPregunta5, checkBoxesPregunta9, resultadoTotal) }
 
+    }
 
+    fun corregir(
+        grupo1: RadioGroup, grupo2: RadioGroup, grupo3: RadioGroup,
+        grupo4: RadioGroup, spinner1: Spinner, spinner2: Spinner, spinner3: Spinner,
+        spinner4: Spinner, checkBoxesPregunta5: List<CheckBox>,
+        checkBoxesPregunta9: List<CheckBox>, resultado: TextView) {
+        respuestasMultiplesUsuario.clear()
+        respuestasSimpleUsuario[0] = recuperarRadioPulsado(grupo1)
+        respuestasSimpleUsuario[1] = spinner1.selectedItem.toString()
+        respuestasSimpleUsuario[2] = recuperarRadioPulsado(grupo2)
+        respuestasSimpleUsuario[3] = spinner2.selectedItem.toString()
+        respuestasSimpleUsuario[4] = spinner3.selectedItem.toString()
+        respuestasSimpleUsuario[5] = recuperarRadioPulsado(grupo3)
+        respuestasSimpleUsuario[6] = recuperarRadioPulsado(grupo4)
+        respuestasSimpleUsuario[7] = spinner4.selectedItem.toString()
+
+        val eleccionUserPreg5 = mutableListOf<String>()
+        for (checkbox in checkBoxesPregunta5) {
+            if (checkbox.isChecked) {
+                eleccionUserPreg5.add(checkbox.text.toString())
+            }
+        }
+        respuestasMultiplesUsuario.add(eleccionUserPreg5)
+
+        val eleccionUserPreg9 = mutableListOf<String>()
+        for (checkbox in checkBoxesPregunta9) {
+            if (checkbox.isChecked) {
+                eleccionUserPreg9.add(checkbox.text.toString())
+            }
+        }
+        respuestasMultiplesUsuario.add(eleccionUserPreg9)
+        val notaTotal = calcularNota()
+        resultado.setText(notaTotal.toString())
+    }
+
+    fun recuperarRadioPulsado(radioGroup: RadioGroup): String? {
+        val idRadoiElegido = radioGroup.checkedRadioButtonId
+        return if (idRadoiElegido != -1) {
+            val radioElegidoTexto: RadioButton = findViewById(idRadoiElegido)
+            radioElegidoTexto.text.toString()
+        } else {
+            null
+        }
+    }
+
+    fun calcularNota(): Double {
+        var nota = 0.0
+
+        // Validar respuestas simples
+        for (i in respuestasCorrectasUnica.indices) {
+            if (respuestasSimpleUsuario[i] == respuestasCorrectasUnica[i]) {
+                nota++
+                indicadoresCorrectoUnica[i].setText("¡Correcto!")
+            } else {
+                indicadoresCorrectoUnica[i].setText("La respuesta correcta era " + respuestasCorrectasUnica[i])
+            }
+        }
+
+        for (i in respuestasCorrectasMultiopcion.indices) {
+            val respuestasCorrectas = respuestasCorrectasMultiopcion[i]
+
+            // Asegúrate de que no accedes a un índice fuera de rango
+            if (i < respuestasMultiplesUsuario.size) {
+                val respuestasUsuario = respuestasMultiplesUsuario[i]
+                var notaPregunta = 0.0
+
+                // Sumar puntos por respuestas correctas elegidas por el usuario
+                for (respuesta in respuestasCorrectas) {
+                    if (respuestasUsuario.contains(respuesta)) {
+                        notaPregunta += 0.5 // Asignar puntaje por respuesta correcta
+                    }
+                }
+
+                // Restar puntos por respuestas incorrectas elegidas por el usuario
+                for (respuesta in respuestasUsuario) {
+                    if (!respuestasCorrectas.contains(respuesta)) {
+                        notaPregunta -= 0.25 // Restar puntaje por respuesta incorrecta
+                    }
+                }
+
+                // Asegurarte que la nota no sea negativa
+                if (notaPregunta < 0) {
+                    notaPregunta = 0.0
+                }
+
+                // Acumular la nota total
+                nota = nota + notaPregunta
+
+                // Actualizar el indicador
+                if (notaPregunta > 0) {
+                    indicadoresCorrectoMultiple[i].text = "¡Correcto!"
+                } else {
+                    indicadoresCorrectoMultiple[i].text =
+                        "Las respuestas correctas eran: ${respuestasCorrectas.joinToString(", ")}"
+                }
+            }
+        }
+        return nota
     }
 }
