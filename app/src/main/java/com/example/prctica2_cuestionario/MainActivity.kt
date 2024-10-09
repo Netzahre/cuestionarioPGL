@@ -171,8 +171,10 @@ class MainActivity : AppCompatActivity() {
         for (i in respuestasCorrectasUnica.indices) {
             if (respuestasSimpleUsuario[i] == respuestasCorrectasUnica[i]) {
                 nota++
+                indicadoresCorrectoUnica[i].setTextColor(resources.getColor(R.color.correcto))
                 indicadoresCorrectoUnica[i].setText("¡Correcto!")
             } else {
+                indicadoresCorrectoUnica[i].setTextColor(resources.getColor(R.color.incorrecto))
                 indicadoresCorrectoUnica[i].setText("La respuesta correcta era " + respuestasCorrectasUnica[i])
             }
         }
@@ -209,8 +211,10 @@ class MainActivity : AppCompatActivity() {
 
                 // Actualizar el indicador
                 if (notaPregunta > 0) {
+                    indicadoresCorrectoMultiple[i].setTextColor(resources.getColor(R.color.correcto))
                     indicadoresCorrectoMultiple[i].text = "¡Correcto!"
                 } else {
+                    indicadoresCorrectoMultiple[i].setTextColor(resources.getColor(R.color.incorrecto))
                     indicadoresCorrectoMultiple[i].text =
                         "Las respuestas correctas eran: ${respuestasCorrectas.joinToString(", ")}"
                 }

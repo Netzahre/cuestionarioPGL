@@ -633,7 +633,7 @@
                         android:paddingRight="10dp"
                         android:text="Resultado:"
                         android:textAlignment="viewStart"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#C79E51"
                         android:textSize="34sp" />
 
                     <TextView
@@ -641,7 +641,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#C79E51"
                         android:textSize="34sp" />
 
                 </LinearLayout>
