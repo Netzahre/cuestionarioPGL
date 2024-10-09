@@ -21,20 +21,25 @@ class MainActivity : AppCompatActivity() {
 
         val pregunta1 = arrayOf("Detectar entidades sobrenaturales (Correcta)",
             "Servir como una fuente de energía", "Sanar heridas", "Brindar información sobre el pasado")
-        val adaptador1 = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,
+        val adaptador1 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown,
             pregunta1)
         val spinner1 = findViewById<Spinner>(R.id.respuestaspinpreg2)
         spinner1.adapter = adaptador1
 
         val pregunta4 = arrayOf("Heartman", "Fragile", "Higgs Monaghan (Correcta)", "Amelie")
-        val adaptador2 = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, pregunta4)
+        val adaptador2 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown, pregunta4)
         val spinner2 = findViewById<Spinner>(R.id.respuestaspinpreg4)
         spinner2.adapter = adaptador2
 
         val pregunta6 = arrayOf("Moto triciclo", "Tiendas privadas (Correcta)", "Exoesqueleto", "Camiones")
-        val adaptador3 = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, pregunta6)
+        val adaptador3 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown, pregunta6)
         val spinner3 = findViewById<Spinner>(R.id.respuestaspinpreg6)
         spinner3.adapter = adaptador3
+
+        val pregunta10 = arrayOf("Reconectar a América", "Destruir a los BTs", "Derrotar a Higgs", "Salvar a Amelie")
+        val adaptador4 = ArrayAdapter<String>(this, R.layout.my_menu_dropdown, pregunta10)
+        val spinner4 = findViewById<Spinner>(R.id.respuestaspinpreg10)
+        spinner4.adapter = adaptador4
 
     }
 
