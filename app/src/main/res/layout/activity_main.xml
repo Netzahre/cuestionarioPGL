@@ -62,7 +62,7 @@
                         android:id="@+id/respuestarad1preg1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Sam Porter Bridges (Correcta) "
+                        android:text="Sam Porter Bridges "
                         android:textColor="#FFFFFF" />
 
                     <RadioButton
@@ -124,7 +124,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:dropDownWidth="wrap_content"
-                    android:popupBackground="@color/black"
                     android:textColor="#FFFFFF" />
 
                 <TextView
@@ -173,7 +172,7 @@
                         android:id="@+id/respuestarad2preg3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="América (Correcta)"
+                        android:text="América"
                         android:textColor="#FFFFFF" />
 
                     <RadioButton
@@ -270,28 +269,28 @@
                     android:id="@+id/check1Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BTs (Correcta)"
+                    android:text="BTs"
                     android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check2Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mule (Incorrecta)"
+                    android:text="Mule"
                     android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check3Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="EV (Correcta)"
+                    android:text="EV"
                     android:textColor="#FFFFFF" />
 
                 <CheckBox
                     android:id="@+id/check4Preg5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ghouls (Incorrecta)"
+                    android:text="Ghouls"
                     android:textColor="#FFFFFF" />
 
                 <TextView
@@ -327,7 +326,8 @@
                 <Spinner
                     android:id="@+id/respuestaspinpreg6"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp" />
+                    android:layout_height="60dp"
+                    android:background="@color/black" />
 
                 <TextView
                     android:id="@+id/resultado6"
@@ -367,7 +367,7 @@
                         android:id="@+id/respuestarad1preg7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Conexiones y aislamiento (Correcta)"
+                        android:text="Conexiones y aislamiento"
                         android:textColor="#FFFFFF" />
 
                     <RadioButton
@@ -430,7 +430,7 @@
                         android:id="@+id/respuestarad1preg8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Acelera el deterioro y envejecimiento (Correcta)"
+                        android:text="Acelera el deterioro y envejecimiento"
                         android:textColor="#FFFFFF" />
 
                     <RadioButton
@@ -515,7 +515,7 @@
                         android:id="@+id/check3Preg9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Permitir teletransportarse (Correcta)"
+                        android:text="Permitir teletransportarse"
                         android:textColor="#FFFFFF" />
 
                     <CheckBox
@@ -559,7 +559,8 @@
                     <Spinner
                         android:id="@+id/respuestaspinpreg10"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp" />
+                        android:layout_height="60dp"
+                        android:background="@color/black" />
 
                     <TextView
                         android:id="@+id/resultado10"
