@@ -130,7 +130,7 @@
                     android:id="@+id/resultado2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text=""
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
@@ -194,7 +194,7 @@
                     android:id="@+id/resultado3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text=""
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
@@ -237,17 +237,17 @@
                         android:id="@+id/resultado4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text=""
                         android:textAlignment="center"
                         android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="34dp" />
-
             </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -297,7 +297,7 @@
                     android:id="@+id/resultado5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text=""
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
@@ -333,7 +333,7 @@
                     android:id="@+id/resultado6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text=""
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
@@ -396,15 +396,15 @@
                     android:id="@+id/resultado7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text=""
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="34dp" />
-
             </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="34dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -459,26 +459,22 @@
                     android:id="@+id/resultado8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text=""
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="34dp" />
-
             </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="34dp" />
 
             <LinearLayout
                 android:id="@+id/clifford"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@mipmap/clifford"
+                android:background="@drawable/clifford"
                 android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -529,7 +525,7 @@
                         android:id="@+id/resultado9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text=""
                         android:textAlignment="center"
                         android:textColor="#FFFFFF" />
 
@@ -566,7 +562,6 @@
                         android:id="@+id/resultado10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF" />
 
