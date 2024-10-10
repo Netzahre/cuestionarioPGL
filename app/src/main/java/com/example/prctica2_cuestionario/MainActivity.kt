@@ -32,8 +32,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var indicadoresCorrectoMultiple: Array<TextView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -116,7 +114,8 @@ class MainActivity : AppCompatActivity() {
 
 
         val resultadoTotal = findViewById<TextView>(R.id.numero)
-        corregir.setOnClickListener { corregir(grupo1, grupo2, grupo3, grupo4, spinner1, spinner2, spinner3, spinner4, checkBoxesPregunta5, checkBoxesPregunta9, resultadoTotal) }
+        corregir.setOnClickListener { corregir(grupo1, grupo2, grupo3, grupo4, spinner1, spinner2,
+            spinner3, spinner4, checkBoxesPregunta5, checkBoxesPregunta9, resultadoTotal) }
 
     }
 
@@ -211,9 +210,13 @@ class MainActivity : AppCompatActivity() {
                 nota = nota + notaPregunta
 
                 // Actualizar el indicador
-                if (notaPregunta > 0) {
+                if (notaPregunta == 1.0) {
                     indicadoresCorrectoMultiple[i].setTextColor(resources.getColor(R.color.correcto))
                     indicadoresCorrectoMultiple[i].text = "¡Correcto!"
+                } else if (notaPregunta < 1.0 && notaPregunta > 0.0) {
+                    indicadoresCorrectoMultiple[i].setTextColor(resources.getColor(R.color.incorrecto))
+                    indicadoresCorrectoMultiple[i].text = "¡Casi! Las respuestas correctas eran: " +
+                            "${respuestasCorrectas.joinToString(", ")}"
                 } else {
                     indicadoresCorrectoMultiple[i].setTextColor(resources.getColor(R.color.incorrecto))
                     indicadoresCorrectoMultiple[i].text =
