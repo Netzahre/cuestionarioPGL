@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         arrayOf("Facilitar la conexión entre jugadores en línea", "Permitir teletransportarse"),
         arrayOf()
     )
+    var cantidad = 0;
 
     lateinit var indicadoresCorrectoUnica: Array<TextView>
     lateinit var indicadoresCorrectoMultiple: Array<TextView>
@@ -113,9 +114,10 @@ class MainActivity : AppCompatActivity() {
         indicadoresCorrectoMultiple = arrayOf(resultado5, resultado9)
 
 
+        val aciertos = findViewById<TextView>(R.id.cantidad)
         val resultadoTotal = findViewById<TextView>(R.id.numero)
         corregir.setOnClickListener { corregir(grupo1, grupo2, grupo3, grupo4, spinner1, spinner2,
-            spinner3, spinner4, checkBoxesPregunta5, checkBoxesPregunta9, resultadoTotal) }
+            spinner3, spinner4, checkBoxesPregunta5, checkBoxesPregunta9, resultadoTotal, aciertos) }
 
     }
 
@@ -123,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         grupo1: RadioGroup, grupo2: RadioGroup, grupo3: RadioGroup,
         grupo4: RadioGroup, spinner1: Spinner, spinner2: Spinner, spinner3: Spinner,
         spinner4: Spinner, checkBoxesPregunta5: List<CheckBox>,
-        checkBoxesPregunta9: List<CheckBox>, resultado: TextView) {
+        checkBoxesPregunta9: List<CheckBox>, resultado: TextView, aciertos: TextView) {
         respuestasMultiplesUsuario.clear()
         respuestasSimpleUsuario[0] = recuperarRadioPulsado(grupo1)
         respuestasSimpleUsuario[1] = spinner1.selectedItem.toString()
@@ -151,6 +153,9 @@ class MainActivity : AppCompatActivity() {
         respuestasMultiplesUsuario.add(eleccionUserPreg9)
         val notaTotal = calcularNota()
         resultado.setText(notaTotal.toString())
+        val aciertosTotal = cantidad.toString()
+        aciertos.setText(aciertosTotal)
+        cantidad = 0;
     }
 
     fun recuperarRadioPulsado(radioGroup: RadioGroup): String? {
@@ -171,6 +176,7 @@ class MainActivity : AppCompatActivity() {
         for (i in respuestasCorrectasUnica.indices) {
             if (respuestasSimpleUsuario[i] == respuestasCorrectasUnica[i]) {
                 nota++
+                cantidad++
                 indicadoresCorrectoUnica[i].setTextColor(resources.getColor(R.color.correcto))
                 indicadoresCorrectoUnica[i].setText("¡Correcto!")
             } else {
@@ -190,6 +196,7 @@ class MainActivity : AppCompatActivity() {
                 // Sumar puntos por respuestas correctas elegidas por el usuario
                 for (respuesta in respuestasCorrectas) {
                     if (respuestasUsuario.contains(respuesta)) {
+                        cantidad++
                         notaPregunta += 0.5 // Asignar puntaje por respuesta correcta
                     }
                 }
@@ -197,6 +204,7 @@ class MainActivity : AppCompatActivity() {
                 // Restar puntos por respuestas incorrectas elegidas por el usuario
                 for (respuesta in respuestasUsuario) {
                     if (!respuestasCorrectas.contains(respuesta)) {
+                        cantidad--
                         notaPregunta -= 0.25 // Restar puntaje por respuesta incorrecta
                     }
                 }
