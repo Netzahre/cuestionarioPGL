@@ -156,11 +156,12 @@ class MainActivity : AppCompatActivity() {
 
     fun recuperarRadioPulsado(radioGroup: RadioGroup): String? {
         val idRadoiElegido = radioGroup.checkedRadioButtonId
-        return if (idRadoiElegido != -1) {
+         if (idRadoiElegido != -1) {
             val radioElegidoTexto: RadioButton = findViewById(idRadoiElegido)
-            radioElegidoTexto.text.toString()
+             return radioElegidoTexto.text.toString()
+
         } else {
-            null
+            return null
         }
     }
 
